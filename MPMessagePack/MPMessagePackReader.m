@@ -132,7 +132,7 @@
   }
   
   for (NSInteger i = 0; i < length; i++) {
-    id key = [self readFromContext:context options:options error:error];
+    id key = [[self readFromContext:context options:options error:error] stringValue];
     if (!key) {
       return [self returnNilWithErrorCode:203 description:@"Unable to read object" error:error];
     }
